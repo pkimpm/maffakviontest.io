@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8daaa13e66c671d4592aade75fa98e9f, type: 3}
+  m_Name: 6
+  m_EditorClassIdentifier: 
+  nodeId: 6
+  speakerName: "\u0414\u0435\u044F"
+  dialogueLine: "\u041D\u0435 \u043F\u043E\u0439\u043C\u0443, \u043A\u0430\u043A
+    \u043C\u043D\u0435 \u043F\u043E\u0441\u0442\u0443\u043F\u0438\u0442\u044C \u0441\u0435\u0439\u0447\u0430\u0441.
+    \u042F\r\n\u043E\u043A\u0430\u0437\u0430\u043B\u0430\u0441\u044C \u043D\u0435
+    \u0433\u043E\u0442\u043E\u0432\u0430\u2026\r"
+  speakerIcon: {fileID: 21300000, guid: 2d0094bfc64035b44802ec0acf983091, type: 3}
+  voiceClip: {fileID: 8300000, guid: 6f5eec91021cd2b4abf4bdc64dd230cb, type: 3}
+  pauseCutsceneAtEnd: 0
+  resumeCutsceneOnStart: 0
+  blockContinueOnStart: 0
+  blockUntilCutsceneEnd: 0
+  nextNode: {fileID: 11400000, guid: d9f6527ec4811bf41ab0f8f0a10780bb, type: 2}
+  isLast: 0

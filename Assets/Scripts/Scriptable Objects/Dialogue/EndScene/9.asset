@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8daaa13e66c671d4592aade75fa98e9f, type: 3}
+  m_Name: 9
+  m_EditorClassIdentifier: 
+  nodeId: 22
+  speakerName: "\u0414\u0435\u044F "
+  dialogueLine: "\u0411\u043B\u0430\u0433\u043E\u0434\u0430\u0440\u044E \u0442\u0435\u0431\u044F.
+    \u0415\u0441\u043B\u0438 \u0431\u044B \u043D\u0435 \u0442\u0432\u043E\u0438 \u0443\u0441\u0438\u043B\u0438\u044F,\r\n\u041C\u0430\u0441\u0442\u043E\u043F\u0430\u0442\u0438\u043D\u0434\u0430
+    \u0440\u0430\u0437\u0440\u0443\u0448\u0438\u043B\u0430 \u0431\u044B \u044D\u0442\u043E\u0442
+    \u0440\u0430\u0439\u0441\u043A\u0438\u0439 \u0443\u0433\u043E\u043B\u043E\u043A\r\n\u0438
+    \u043C\u0435\u043D\u044F \u0441\u0430\u043C\u0443\u2026"
+  speakerIcon: {fileID: 21300000, guid: 2d0094bfc64035b44802ec0acf983091, type: 3}
+  voiceClip: {fileID: 8300000, guid: 0d2ea9769ae721a478c752b2c436825a, type: 3}
+  pauseCutsceneAtEnd: 0
+  resumeCutsceneOnStart: 0
+  blockContinueOnStart: 0
+  blockUntilCutsceneEnd: 0
+  nextNode: {fileID: 11400000, guid: 1787397ff2dd2a74892c48beb4a3e6ae, type: 2}
+  isLast: 0

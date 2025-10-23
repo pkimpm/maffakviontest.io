@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | Akvion</title>
+    <style>
+      body {
+        text-align: center;
+        padding: 0;
+        border: 0;
+        margin: 0;
+        overflow: hidden;
+      }
+
+      #unity-canvas {
+        width: 1920px;
+        height: 1080px;
+        background: #231F20;
+      }
+
+      /* Overlay для предупреждения о портретной ориентации */
+      #rotate-screen {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #231F20;
+        color: white;
+        z-index: 9999;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: Arial, sans-serif;
+      }
+
+      #rotate-screen svg {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 20px;
+        animation: rotate 2s ease-in-out infinite;
+      }
+
+      @keyframes rotate {
+        0%, 100% { transform: rotate(0deg); }
+        50% { transform: rotate(90deg); }
+      }
+
+      @media only screen and (max-width: 768px) and (orientation: portrait) {
+        #rotate-screen {
+          display: flex !important;
+        }
+        #unity-canvas {
+          display: none;
+        }
+      }
+
+      @media only screen and (max-width: 768px) and (orientation: landscape) {
+        #unity-canvas {
+          width: 100vw !important;
+          height: 100vh !important;
+          position: fixed;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Экран предупреждения о необходимости повернуть устройство -->
+    <div id="rotate-screen">
+      <svg viewBox="0 0 24 24" fill="white">
+        <path d="M16.48 2.52c3.27 1.55 5.61 4.72 5.97 8.48h1.5C23.44 4.84 18.29 0 12 0l-.66.03 3.81 3.81 1.33-1.32zm-6.25-.77c-.59-.59-1.54-.59-2.12 0L1.75 8.11c-.59.59-.59 1.54 0 2.12l12.02 12.02c.59.59 1.54.59 2.12 0l6.36-6.36c.59-.59.59-1.54 0-2.12L10.23 1.75zm4.6 19.44L2.81 9.17l6.36-6.36 12.02 12.02-6.36 6.36zM1.75 21.64c0 1.04.84 1.88 1.88 1.88H8.4c1.04 0 1.88-.84 1.88-1.88v-1.64H1.75v1.64z"/>
+      </svg>
+      <h2>Пожалуйста, поверните устройство</h2>
+      <p>Эта игра поддерживает только ландшафтную ориентацию</p>
+    </div>
+
+    <canvas id="unity-canvas" width=1920 height=1080></canvas>
+    
+    <script src="Build/WebGL.loader.js"></script>
+    <script>
+      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+        // Принудительная ландшафтная ориентация для мобильных устройств
+        var meta = document.createElement('meta');
+        meta.name = 'viewport';
+        meta.content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+        document.getElementsByTagName('head')[0].appendChild(meta);
+
+        // Попытка использовать Screen Orientation API (для поддерживаемых браузеров)
+        if (screen.orientation && screen.orientation.lock) {
+          screen.orientation.lock('landscape').catch(function(error) {
+            console.log('Orientation lock failed: ' + error);
+          });
+        }
+
+        var canvas = document.querySelector("#unity-canvas");
+        canvas.style.width = "100vw";
+        canvas.style.height = "100vh";
+        canvas.style.position = "fixed";
+        canvas.style.top = "0";
+        canvas.style.left = "0";
+
+        document.body.style.textAlign = "left";
+      }
+
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/WebGL.data.unityweb",
+        frameworkUrl: "Build/WebGL.framework.js.unityweb",
+        codeUrl: "Build/WebGL.wasm.unityweb",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "Akvion",
+        productName: "Akvion",
+        productVersion: "0.1.0",
+        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+      });
+    </script>
+  </body>
+</html>

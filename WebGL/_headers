@@ -1,0 +1,26 @@
+/Build/WebGL.loader.js
+  Content-Type: application/javascript
+
+/Build/WebGL.framework.js.gz
+  Content-Encoding: gzip
+  Content-Type: application/javascript
+
+/Build/WebGL.framework.js.br
+  Content-Encoding: br
+  Content-Type: application/javascript
+
+/Build/WebGL.data.gz
+  Content-Encoding: gzip
+  Content-Type: application/octet-stream
+
+/Build/WebGL.data.br
+  Content-Encoding: br
+  Content-Type: application/octet-stream
+
+/Build/WebGL.wasm.gz
+  Content-Encoding: gzip
+  Content-Type: application/wasm
+
+/Build/WebGL.wasm.br
+  Content-Encoding: br
+  Content-Type: application/wasm

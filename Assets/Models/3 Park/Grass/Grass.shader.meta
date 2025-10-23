@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 947355c823b272d489f36561db5960f5
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures:
+  - _MainTex: {fileID: 2800000, guid: 3b0fd05e3cc00964f93fd9499a6f9325, type: 3}
+  - _Normal: {fileID: 2800000, guid: a684ca368a86b5e42a99328f15dd3853, type: 3}
+  - _Noise: {fileID: 2800000, guid: 780e3b564fdc27b4a86f5e9b54bcd2a3, type: 3}
+  - _texcoord: {instanceID: 0}
+  - unity_Lightmaps: {instanceID: 0}
+  - unity_LightmapsInd: {instanceID: 0}
+  - unity_ShadowMasks: {instanceID: 0}
+  nonModifiableTextures: []
+  preprocessorOverride: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
